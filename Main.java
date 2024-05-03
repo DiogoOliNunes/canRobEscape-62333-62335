@@ -25,16 +25,16 @@ public class Main {
 
         int B = Integer.parseInt(reader.readLine());
 
-        List<int[]> beams = new ArrayList<>(B);
+        EscapeSolver escapeSolver = new EscapeSolver(L, W, D, B);
+
         for (int i = 0; i < B; i++) {
             String[] coordinates = reader.readLine().split(" ");
             int x = Integer.parseInt(coordinates[0]);
             int y = Integer.parseInt(coordinates[1]);
 
-            beams.add(new int[]{x, y});
+            escapeSolver.addBeam(x, y);
         }
 
-        EscapeSolver escapeSolver = new EscapeSolver(L, W, D, beams);
         boolean canEscape = escapeSolver.canEscape();
         if (canEscape)
             System.out.println("Rob manages to escape!");
