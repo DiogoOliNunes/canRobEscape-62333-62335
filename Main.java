@@ -32,7 +32,7 @@ public class Main {
             int x = Integer.parseInt(coordinates[0]);
             int y = Integer.parseInt(coordinates[1]);
 
-            escapeSolver.addBeam(x, y);
+            escapeSolver.addBeam(x, y);///fazer uma chamada a cada for é mais custoso que fazer tudo de uma vez no outro lado?
         }
 
         boolean canEscape = escapeSolver.canEscape();
