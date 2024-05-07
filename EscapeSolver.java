@@ -62,9 +62,9 @@ public class EscapeSolver {
     }
 
     private void unify(int index1, int index2) {
-        int rep1 = partition.find(index1);
-        int rep2 = partition.find(index2);
-        partition.union(rep1, rep2);
+            int rep1 = partition.find(index1);
+            int rep2 = partition.find(index2);
+            if (rep1 != rep2) partition.union(rep1, rep2);
     }
 
     public void addBeam(int x, int y) {
