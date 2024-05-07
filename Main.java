@@ -32,11 +32,10 @@ public class Main {
             int x = Integer.parseInt(coordinates[0]);
             int y = Integer.parseInt(coordinates[1]);
 
-            escapeSolver.addBeam(x, y);///fazer uma chamada a cada for é mais custoso que fazer tudo de uma vez no outro lado?
+            escapeSolver.addBeam(x, y);
         }
 
-        boolean canEscape = escapeSolver.canEscape();
-        if (canEscape)
+        if (escapeSolver.getCanEscape())
             System.out.println("Rob manages to escape!");
         else
             System.out.println("Impossible to escape");
