@@ -15,8 +15,8 @@ public class EscapeSolver {
         this.width = W;
         this.robDiameter = D;
         this.numBeams = B;
-        this.beams = new ArrayList<>(B+2);
-        this.partition = new UnionFindInArray(B+2);
+        this.beams = new ArrayList<>(numBeams+2);
+        this.partition = new UnionFindInArray(numBeams+2);
         this.canEscape = true;
     }
 
@@ -39,7 +39,7 @@ public class EscapeSolver {
     }
 
     private void checkDistances() {
-        if (beams.size() > 1)
+        if (beams.size() > 3)
             beams.forEach(beam -> {
                 int beamIndex = beams.indexOf(beam);
                 if (beamIndex != 0 && beamIndex != 1)
